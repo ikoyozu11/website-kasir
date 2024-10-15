@@ -37,7 +37,7 @@ class SupplierController extends Controller
             'telp_supplier' => $request->telp_supplier,
         ]);
 
-        return redirect()->route('super_admin.supplier')->with('success', 'Barang berhasil ditambahkan');
+        return redirect()->route('super_admin.supplier')->with('success', 'Data berhasil ditambahkan');
     }
 
     // ubah
@@ -72,7 +72,7 @@ class SupplierController extends Controller
             ['status_supplier' => 0]
         );
 
-        return redirect()->back()->with('success', 'Barang berhasil di non aktifkan.');
+        return redirect()->back()->with('success', 'Data berhasil di non aktifkan.');
     }
 
     public function restore($id)
@@ -82,6 +82,6 @@ class SupplierController extends Controller
             ['status_supplier' => 1]
         );
 
-        return redirect()->back()->with('success', 'Barang berhasil di aktifkan.');
+        return redirect()->back()->with('success', 'Data berhasil di aktifkan.');
     }
 }
